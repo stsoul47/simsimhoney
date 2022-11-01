@@ -1,7 +1,11 @@
-import React from 'react';
+import {Routes, Route, useLocation} from "react-router";
+import {Main, TestPages} from "@pages/index";
 function App() {
   return (
-    <div>App tsx</div>
+    <Routes>
+      <Route path="/" element={<Main/>}/>
+      <Route path="/test" element={ <TestPages /> }/>
+    </Routes>
   );
 }
 

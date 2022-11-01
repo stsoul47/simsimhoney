@@ -33,7 +33,7 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
-          test: /\.tsx?$/,
+          test: [/\.tsx?$/],
           use: ["babel-loader", "ts-loader"],
         },
         {
@@ -59,12 +59,16 @@ module.exports = (env, argv) => {
         },
       ],
     },
+    devServer: {
+      historyApiFallback: true,
+    },
     plugins: [
       new webpack.ProvidePlugin({
         React: "react",
       }),
       new HtmlWebpackPlugin({
-        template: './public/index.html',
+        template: path.resolve(__dirname, 'public/index.html'),
+        publicPath: '/',
         minify: process.env.NODE_ENV === 'production' ? {
           collapseWhitespace: true, // 빈칸 제거
           removeComments: true, // 주석 제거
