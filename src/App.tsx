@@ -1,7 +1,8 @@
 import React from 'react';
+import './assets/scss/test.scss'
 function App() {
   return (
-    <div>App tsx</div>
+    <div className="test">App tsx</div>
   );
 };
 

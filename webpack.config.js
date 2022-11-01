@@ -27,6 +27,26 @@ module.exports = (env, argv) => {
           test: /\.tsx?$/,
           use: ["babel-loader", "ts-loader"],
         },
+        {
+          test: [/\.s[ac]ss/i, /\.css$/],
+          use: [
+            { loader: 'style-loader'},
+            // css-loader 소스맵 옵션 활성화
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true
+              }
+            },
+            // sass-loader 소스맵 옵션 활성화
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
+            },
+          ],
+        },
       ],
     },
     plugins: [
