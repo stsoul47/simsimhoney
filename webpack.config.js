@@ -20,12 +20,37 @@ module.exports = (env, argv) => {
     },
     resolve: {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
+      alias: {
+        '@': path.resolve(__dirname, 'src/'),
+        '@assets': path.resolve(__dirname, 'src/assets/'),
+      }
     },
     module: {
       rules: [
         {
           test: /\.tsx?$/,
           use: ["babel-loader", "ts-loader"],
+        },
+        {
+          test: [/\.s[ac]ss/i, /\.css$/],
+          use: [
+            // style-loader 소스맵 옵션 활성화
+            {loader: 'style-loader'},
+            // css-loader 소스맵 옵션 활성화
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true
+              }
+            },
+            // sass-loader 소스맵 옵션 활성화
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
+            },
+          ],
         },
       ],
     },
