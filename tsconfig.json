@@ -12,9 +12,13 @@
     "moduleResolution": "node",
     "baseUrl": "./src",
     "paths": {
+      "@": ["*"],
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["pages/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@store/*": ["store/*"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
