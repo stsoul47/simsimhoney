@@ -9,4 +9,10 @@ const { createWebpackAliases } = require('./webpack.helpers');
  */
 module.exports = createWebpackAliases({
   '@components': 'src/components',
+  '@assets':'src/assets',
+  '@pages':'src/pages',
+  '@utils':'src/utils',
+  '@hooks':'src/hooks',
+  '@redux':'src/redux'
+
 });
