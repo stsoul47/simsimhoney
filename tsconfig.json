@@ -1,22 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["dom", "ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020"],
+    "jsx": "react-jsx",
     "allowJs": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "isolatedModules": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "baseUrl": "./src",
-    "paths": {
-      "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"]
-    },
-    "allowSyntheticDefaultImports": true,
+    "target": "ES6",
+    "module": "ESNext",
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "paths": {
+      "*": ["node_modules/*"],
+      "@components/*": ["./components/*"]
+    }
+  },
+  "include": ["src/**/*", "tools/**/*"]
 }
