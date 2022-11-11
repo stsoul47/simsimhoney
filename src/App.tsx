@@ -11,9 +11,9 @@ const App = () => {
   return (
     <Routes>
       <Route element={<MainLayout menu={menu} />}>
-        {/*{ menu.map((res) => res.category === 'main' ? <Route path={res.link} element={res.element}/> : null)}*/}
-        <Route path='/' element={<Main />}/>
-        <Route path='/sub1' element={<SubPage1 />}/>
+        { menu.map((res) => res.category === 'main' ? <Route path={res.link} element={res.element}/> : null)}
+        {/*<Route path='/' element={<Main />}/>*/}
+        {/*<Route path='/sub1' element={<SubPage1 />}/>*/}
       </Route>
     </Routes>
   )
