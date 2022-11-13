@@ -16,6 +16,7 @@ module.exports = {
   stats: 'errors-warnings',
   devtool: 'cheap-module-source-map',
   devServer: {
+    historyApiFallback: true,
     open: true,
   },
   optimization: {

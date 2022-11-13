@@ -14,7 +14,12 @@
     "resolveJsonModule": true,
     "paths": {
       "*": ["node_modules/*"],
-      "@components/*": ["./components/*"]
+      "@components/*": ["./components/*"],
+      "@assets/*": ["./assets/*"],
+      "@pages/*": ["./pages/*"],
+      "@utils/*": ["./utils/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@redux": ["./redux/*"]
     }
   },
   "include": ["src/**/*", "tools/**/*"]
